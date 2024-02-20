@@ -1,0 +1,25 @@
+
+* 1.设置字体：File -- setting -- Editor -- font
+* 2.目录字体大小：File -- setting -- Appearance
+* 3.背景主题设置：File -- setting -- Editor -- Color Scheme
+* 4.字符编码设置：File -- setting -- Editor -- File Encodings
+* 5.去掉提示信息：File -- setting -- Editor -- Inlay Hints -- Java -- 把钩去掉即可
+
+快捷键 （配置：File -- setting -- keymap ）
+1.删除当前行  Ctrl+D
+2.复制当前行  Ctrl+C
+3.补全代码    alt +/
+4.添加取消注释Ctrl+/
+5.导入改行需要的类 先配置File -- setting -- Editor -- General-- auto import 
+ （勾上add...  和  Optimize... 这两个选项），然后使用alt+enter
+6.格式化代码  Ctrl+ alt + L
+7.快速运行程序 alt + R
+8.生成构造器等 alt + insert 
+9.查看一个类的层级关系 Ctrl + H （学继承后，很有用）
+10.将一个光标放在一个方法上，输入Ctrl+B，可以定位到方法（学继承后，很有用）
+11.自动的分配变量名，通过在后面 .var
+12
+
+模板/自定义模板
+File -- setting -- Editor -- Live template
+可以高效开发
