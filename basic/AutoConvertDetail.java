@@ -9,7 +9,7 @@ public class AutoConvertDetail{
 		// short，byte  和 char之间不会自动转换
 		// 当把具体数赋值给byte时，先判断数是否在byte范围内，如果是就可以
 		// 如果是变量赋值，判断类型
-		byte b1 = 10  //对的，-128 - 127
+		byte b1 = 10;  //对的，-128 - 127
 		int n2 =  1;
 		byte b2 = n2;  //报错
 
