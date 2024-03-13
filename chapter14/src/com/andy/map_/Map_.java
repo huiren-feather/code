@@ -13,5 +13,7 @@ public class Map_ {
         map.put("one","sun");
         map.put("one","huiren");//有相同的K，会替换value
         System.out.println(map);
+//        get方法通过Key获取value
+        System.out.println(map.get("2"));
     }
 }
