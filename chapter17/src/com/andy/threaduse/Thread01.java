@@ -1,11 +1,15 @@
 package com.andy.threaduse;
 
 public class Thread01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        创建一个Cat对象
         Cat cat = new Cat();
         cat.start();//启动线程
-
+        System.out.println("主线程继续执行"+Thread.currentThread().getName());
+        for (int i = 0; i < 100; i++) {
+            System.out.println("主线程 i="+i);
+            Thread.sleep(1000);
+        }
     }
 }
 //继承了Thread，就可以把他当线程来用
@@ -22,7 +26,7 @@ class Cat extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            if (times==8){
+            if (times==80){
                 break;//8时就退出循环，这时线程也就退出了
             }
         }
