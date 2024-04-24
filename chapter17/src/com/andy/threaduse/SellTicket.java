@@ -2,12 +2,21 @@ package com.andy.threaduse;
 
 public class SellTicket {
     public static void main(String[] args) {
-        SellTicket01 sellTicket01 = new SellTicket01();
-        sellTicket01.start();
-//        SellTicket02 sellTicket02 = new SellTicket02();
-//        Thread thread = new Thread(sellTicket02);
-//        thread.start();
-        new SellTicket01().start();
+//        SellTicket01 sellTicket01 = new SellTicket01();
+//        SellTicket01 sellTicket02 = new SellTicket01();
+//        SellTicket01 sellTicket03 = new SellTicket01();
+//        sellTicket01.start();
+//        sellTicket02.start();
+//        sellTicket03.start();
+
+        SellTicket02 sellTicket04 = new SellTicket02();
+        Thread thread = new Thread(sellTicket04);
+        Thread thread2 = new Thread(sellTicket04);
+        Thread thread3 = new Thread(sellTicket04);
+        thread.start();
+        thread2.start();
+        thread3.start();
+
 
     }
 }
