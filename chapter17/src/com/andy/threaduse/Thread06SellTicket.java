@@ -46,7 +46,7 @@ class Ticket extends Thread {
     }
 }
 //实现接口的方式可以保证售票不超；
-//继承的方式还是会超出总票数
+//继承的方式还是会超出总票数:因为继承会额外新建对象实例，没有锁住；锁本身锁的就是对象
 class Ticket02 implements Runnable {
     private static int tickNum = 100;
     private  boolean loop=true;

@@ -22,7 +22,7 @@ class T3 extends Thread{
             System.out.println(Thread.currentThread().getName()+"吃包子。。。"+i);
         }
         try{
-            System.out.println(Thread.currentThread().getName()+"休眠中。。。");
+            System.out.println(Thread.currentThread() .getName()+"休眠中。。。");
             Thread.sleep(20000);
         }catch (InterruptedException e ){
             System.out.println(Thread.currentThread().getName()+"被interrupt了。。。");
