@@ -1,9 +1,6 @@
 package com.andy.upload;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -25,7 +22,15 @@ public class TCPFileUploadServer {
         bos.write(bytes);
         bos.close();
 
+//      向客户端回复“收到图片”
+//        通过Socket 获取到输出流（字符）
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+        writer.write("收到图片");
+        writer.flush();//把内容刷新到数据通道
+        socket.shutdownOutput();//设置写入结束标记
+
 //        关闭其他资源
+        writer.close();
         bis.close();
         socket.close();
         serverSocket.close();

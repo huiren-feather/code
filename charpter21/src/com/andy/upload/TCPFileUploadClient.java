@@ -1,9 +1,6 @@
 package com.andy.upload;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -23,7 +20,13 @@ public class TCPFileUploadClient {
         bis.close();
         socket.shutdownOutput();//设置写入数据的结束标记
 
+//        接收从服务端回复的消息
+        InputStream inputStream = socket.getInputStream();
+//        使用StreamUtils 的方法，直接讲 inputStream 读取到的内容，转成字符串
+        String s = StreamUtils.streamToString(inputStream);
+        System.out.println(s);
 //        关闭相关的流
+        inputStream.close();
         bos.close();
         socket.close();
     }
