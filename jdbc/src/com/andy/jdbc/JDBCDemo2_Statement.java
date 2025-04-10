@@ -19,7 +19,7 @@ public class JDBCDemo2_Statement {
         String password = "1234";
         Connection conn = DriverManager.getConnection(url,username,password);
 //        3.定义SQL
-        String sql = " UPDATE stu set score = 100 where `name` = 'pink'";
+        String sql = " UPDATE stu set score = 100 where `name` = 'andy'";
 
 //        4.h获取执行SQL的对象Statement
         Statement stmt = conn.createStatement();
@@ -28,8 +28,13 @@ public class JDBCDemo2_Statement {
         int count = stmt.executeUpdate(sql);//返回受影响的行数
 
 //        6.处理结果
-        System.out.println(count);
+//        System.out.println(count);
 
+        if (count >0 ){
+            System.out.println("修改成功~");
+        }else {
+            System.out.println("修改失败~");
+        }
 //        7.释放资源
         stmt.close();
         conn.close();
